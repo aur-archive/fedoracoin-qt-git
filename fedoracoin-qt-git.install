@@ -1,0 +1,12 @@
+post_install() {
+    update-desktop-database -q
+	echo "Please tip your fedoras towards your humble packager at EMXTMdq5W9xPedbhNAx2DQVzHsBZDXvGYo, m'ladies and gentlesirs."
+}
+
+post_upgrade() {
+    post_install $1
+}
+
+post_remove() {
+    update-desktop-database -q
+}
